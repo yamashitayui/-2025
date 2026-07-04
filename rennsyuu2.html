@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>山下結衣</title>
+    <style>
+      body {
+        background-color: lightblue; /* 明るい水色の背景 */
+        font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+        text-align: center;
+        margin: 0;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      /* ページタイトル（第三回課題） */
+      h1 {
+        color: #003366; /* 濃い青色 */
+        font-size: 2em;
+        margin-top: 25px;
+        margin-bottom: 5px;
+      }
+
+      h4 {
+        margin-top: 5px;
+        color: #333;
+        font-weight: normal;
+      }
+
+      /* ノート（本文ブロック） */
+      .note {
+        background: linear-gradient(180deg, #ffffff 0%, #f9f9ff 100%);
+        line-height: 1.8;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 30px auto;
+        width: 60%;
+        text-align: left;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ノート内の見出し（①②） */
+      .note h1 {
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: #1e90ff;
+        border-bottom: 2px solid #87cefa;
+        padding-bottom: 5px;
+      }
+
+      /* 本文 */
+      .note p {
+        color: #000;
+        margin: 8px 0;
+        letter-spacing: 0.03em;
+      }
+
+      /* イラスト（横並び中央配置） */
+      .illustration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px; /* 画像の間隔 */
+        margin: 30px 0;
+      }
+
+      .illustration img {
+        width: 25%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+      }
+
+      .illustration img:hover {
+        transform: scale(1.05); /* ホバー時に少し拡大 */
+      }
+
+      /* スマホ対応 */
+      @media (max-width: 600px) {
+        .note {
+          width: 90%;
+          padding: 15px;
+        }
+
+        h1 {
+          font-size: 1.6em;
+        }
+
+        .illustration {
+          flex-direction: column; /* スマホでは縦並び */
+          gap: 20px;
+        }
+
+        .illustration img {
+          width: 60%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>第三回課題</h1>
+
+    <div class="note">
+      <h1>① カード目録の利点</h1>
+      <p>
+        カード目録は紙という観点からコンピュータのシステムに左右されない点が利点だと思います。
+        例えばコンピュータで管理をしている場合、万が一システムが停止した場合でも利用できます。
+        また、カードが分類順に並んでいるという点からも、コンピュータを使い慣れていない人や高齢者にも使いやすいシステムであると思います。
+      </p>
+    </div>
+
+    <!-- ①と②の間に2枚のイラストを横並びで配置 -->
+    <div class="illustration">
+      <img src="https://2.bp.blogspot.com/-JAIbq3c1d4I/UPzH_qDWlUI/AAAAAAAAK04/Ys-vw2CpZbg/s1600/reading_girl.png" alt="読書する女の子">
+      <img src="https://1.bp.blogspot.com/-Huek6p8BLZ0/XTPn4FYYtQI/AAAAAAABTuE/535xQKn8cF8ACIMBhDbVZhx6QjXdjbpgACLcBGAs/s800/book_hon_no_mushi_man.png" alt="本の虫の男性">
+    </div>
+
+    <div class="note">
+      <h1>② OPACの目録規定</h1>
+      <p>2018年版</p>
+      <p>（日本図書館協会　<a href= "https://www.jla.or.jp/committees/mokuroku/ncr2018/" >日本目録規則2018年版</a>　より）</p>
+    </div>
+  </body>
+</html>

@@ -1,32 +1,130 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>山下結衣</title>
-    <style>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>html練習用</title>
+  <style>
+    :root {
+      --main-purple: #7D2ABD;
+      --light-purple: #F3E8FF;
+      --line-purple: #B57EDC;
+    }
+    body > h1 {
+  border-bottom: 3px solid var(--line-purple);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+    body {
+      background-color: var(--light-purple);
+      font-family: "UD デジタル 教科書体", "Yu Gothic", sans-serif;
+      text-align: center;
+      margin: 0;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* ページタイトル */
+    body > h1 {
+      color: var(--main-purple);
+      font-size: 2em;
+      margin-top: 25px;
+      margin-bottom: 5px;
+    }
+
+    .date {
+      color: #555;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+    }
+
+    /* 本文ブロック（ノート） */
+    .note {
+      background: linear-gradient(180deg, #ffffff 0%, #f9f9ff 100%);
+      line-height: 1.8;
+      padding: 25px;
+      border-radius: 15px;
+      margin: 30px auto;
+      width: 70%;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ノート内見出し */
+    .note h2 {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 12px;
+      color: var(--main-purple);
+      border-bottom: 2px solid var(--line-purple);
+      padding-bottom: 5px;
+    }
+
+    .note p {
+      color: #000;
+      margin: 12px 0;
+      letter-spacing: 0.03em;
+      text-indent: 1em;
+    }
+
+    /* 画像レイアウト（使用しない場合は削除可能） */
+    .illustration {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin: 30px 0;
+    }
+
+    .illustration img {
+      width: 25%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .illustration img:hover {
+      transform: scale(1.05);
+    }
+
+    /* スマホ対応 */
+    @media (max-width: 600px) {
       .note {
-        background-color: #ccffcc; /* 薄い緑 */
-        line-height: 2.5em; /* 文字の高さ */
-        padding: 10px; /* 内側余白を追加して見やすく */
+        width: 90%;
+        padding: 15px;
       }
-      .note img {
-        display: block; /* ブロック要素にする */
-        margin: 0 auto; /* 左右の余白を自動で均等に */
+
+      body > h1 {
+        font-size: 1.6em;
       }
-      p {
-        color: red;
+
+      .illustration {
+        flex-direction: column;
+        gap: 20px;
       }
-    </style>
-  </head>
-  <body>
-    <h1>本の紹介</h1>
-    <h4>山下結衣</h4>
-    <div class="note">
-      <p>かがみの孤城　辻村深月著</p>
-      <img src="https://item-shopping.c.yimg.jp/i/n/bookfan_bk-4591153320" width="30%">
-      <p>中学生の主人公こころはあることが原因で学校に行けず家に引きこもる少女。ある日、自室の鏡が光り中に吸い込まれたこころは狼の仮面をつけた謎の少女が仕切る孤城に招待される。
-      そこにはこころと同じように学校に行くことのできない6人の男女がいた。そして謎の少女はこの城に隠されている鍵を見つけ出せば何でも願いをかなえられると言うのだった。</p>
-      <p>7人の少年少女が織りなす不思議な不思議な鏡の世界の物語。</p>
-    </div>
-  </body>
-</html>>
+
+      .illustration img {
+        width: 60%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>タイトル</h1>
+  <p class="date">日付</p>
+
+  <div class="note">
+    <h2>小見出し</h2>
+    <p>本文</p>
+  </div>
+
+  <div class="note">
+    <h2>小見出し2</h2>
+    <p>本文</p>
+  </div>
+
+</body>
+</html>
